@@ -12,17 +12,56 @@ function StepOne() {
             Step 1
           </div>
         </div>
-        <div>
-          <div className="font-sans not-italic font-medium text-sm leading-5 ">
+        <div className="flex flex-col gap-3 mb-4">
+          <div className="font-sans not-italic font-medium text-sm leading-5">
             Job title<span className="text-red-600">*</span>
           </div>
           <div>
-            <input type="text" className="px-4 py-3" />
+            <input
+              type="text"
+              className="px-4 py-2 border border-gray-300 w-full"
+              placeholder="ex. UX UI Designer"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 mb-4">
+          <div className="font-sans not-italic font-medium text-sm leading-5">
+            Company name<span className="text-red-600">*</span>
+          </div>
+          <div>
+            <input
+              type="text"
+              className="px-4 py-2 border border-gray-300 w-full"
+              placeholder="ex. Google"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 mb-4">
+          <div className="font-sans not-italic font-medium text-sm leading-5">
+            Industry<span className="text-red-600">*</span>
+          </div>
+          <div>
+            <input
+              type="text"
+              className="px-4 py-2 border border-gray-300 w-full"
+              placeholder="ex. Information Technology "
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="font-sans not-italic font-medium text-sm leading-5">
+            Location<span className="text-red-600">*</span>
+          </div>
+          <div>
+            <input
+              type="text"
+              className="px-4 py-2 border border-gray-300 w-full"
+              placeholder="ex. Chennai"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
-
 export default StepOne;
