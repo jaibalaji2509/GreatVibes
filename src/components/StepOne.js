@@ -10,10 +10,11 @@ function StepOne() {
   const [first, setfirst] = useState(true);
   const [second, setsecond] = useState(false);
   const [third, setthird] = useState(false);
+
   return (
     <>
       {first && (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen w-full">
           <div className="border bg-white border-gray-200 h-24 h-auto w-2/5 p-8 shadow-lg">
             <div className="flex flex-row justify-between mb-6">
               <Heading
@@ -82,6 +83,7 @@ function StepOne() {
                 borderprimary="border-blue-500"
                 bgsecondary="bg-zinc-900"
                 FWeight="font-medium"
+                textColor="text-white"
                 FSize="text-base"
                 onClick={() => {
                   setfirst(false);
@@ -190,6 +192,7 @@ function StepOne() {
                 bgsecondary="bg-zinc-900"
                 FWeight="font-medium"
                 FSize="text-base"
+                textColor="text-white"
                 onClick={() => {
                   setfirst(false);
                   setsecond(false);
@@ -203,86 +206,180 @@ function StepOne() {
 
       {third && (
         <div className="container mx-auto">
-          <div className="flex flex-col justify-center items-center h-screen">
-            <div className="flex w-1/2 h-auto m-0 p-5 border border-gray-200  rounded-lg bg-white shadow-xl">
-              <div className="flex-shrink-0">
-                <img className="w-12 h-12" src={cardLogo} alt="Logo" />
+          <div className="flex flex-row justify-center">
+            <div className="flex flex-col justify-center items-center h-screen w-full">
+              <div className="flex w-4/5 h-80 m-0 p-5 border border-gray-200  rounded-lg bg-white shadow-xl">
+                <div className="flex-shrink-0">
+                  <img className="w-12 h-12" src={cardLogo} alt="Logo" />
+                </div>
+                <div className="ml-6 pt-1 flex flex-col gap-6">
+                  <div>
+                    <Label
+                      Fweight="font-normal"
+                      Fsize="text-2xl"
+                      lHeight="leading-8"
+                      label="UX UI Designer"
+                      textColor="text-black"
+                    />
+
+                    <Label
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Great Vibes - Information Technology"
+                      textColor="text-black"
+                    />
+
+                    <Label
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Chennai, Tamilnadu, India (In-office)"
+                      textColor="text-gray-500"
+                    />
+                  </div>
+
+                  <div>
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Part-Time (9.00 am - 5.00 pm IST)"
+                      textColor="text-gray-800"
+                    />
+
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Experience (1 - 2 years)"
+                      textColor="text-gray-800"
+                    />
+
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="INR (₹) 30,000 - 50,000 / Month"
+                      textColor="text-gray-800"
+                    />
+
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="51-200 employees"
+                      textColor="text-gray-800"
+                    />
+                  </div>
+
+                  <div>
+                    <Button
+                      label={"Apply Now"}
+                      bgprimary="bg-blue-500"
+                      textprimary="text-blue-500"
+                      borderprimary="border-blue-500"
+                      bgsecondary="bg-zinc-900"
+                      FWeight="font-medium"
+                      FSize="text-base"
+                      textColor="text-white"
+                      onClick={() => {
+                        alert("Successfully applied");
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="ml-6 pt-1 flex flex-col gap-6">
-                <div>
-                  <Label
-                    Fweight="font-normal"
-                    Fsize="text-2xl"
-                    lHeight="leading-8"
-                    label="UX UI Designer"
-                    textColor="text-black"
-                  />
-
-                  <Label
-                    Fweight="font-normal"
-                    Fsize="text-base"
-                    lHeight="leading-6"
-                    label="Great Vibes - Information Technology"
-                    textColor="text-black"
-                  />
-
-                  <Label
-                    Fweight="font-normal"
-                    Fsize="text-base"
-                    lHeight="leading-6"
-                    label="Chennai, Tamilnadu, India (In-office)"
-                    textColor="text-gray-500"
-                  />
+            </div>
+            <div className="flex flex-col justify-center items-center h-screen w-full">
+              <div className="flex w-4/5 h-80 m-0 p-5 border border-gray-200  rounded-lg bg-white shadow-xl">
+                <div className="flex-shrink-0">
+                  <img className="w-12 h-12" src={cardLogo} alt="Logo" />
                 </div>
+                <div className="ml-6 pt-1 flex flex-col gap-6">
+                  <div>
+                    <Label
+                      Fweight="font-normal"
+                      Fsize="text-2xl"
+                      lHeight="leading-8"
+                      label="UX UI Designer"
+                      textColor="text-black"
+                    />
 
-                <div>
-                  <Label
-                    className="pt-8"
-                    Fweight="font-normal"
-                    Fsize="text-base"
-                    lHeight="leading-6"
-                    label="Part-Time (9.00 am - 5.00 pm IST)"
-                    textColor="text-gray-800"
-                  />
+                    <Label
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Great Vibes - Information Technology"
+                      textColor="text-black"
+                    />
 
-                  <Label
-                    className="pt-8"
-                    Fweight="font-normal"
-                    Fsize="text-base"
-                    lHeight="leading-6"
-                    label="Experience (1 - 2 years)"
-                    textColor="text-gray-800"
-                  />
+                    <Label
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Chennai, Tamilnadu, India (In-office)"
+                      textColor="text-gray-500"
+                    />
+                  </div>
 
-                  <Label
-                    className="pt-8"
-                    Fweight="font-normal"
-                    Fsize="text-base"
-                    lHeight="leading-6"
-                    label="INR (₹) 30,000 - 50,000 / Month"
-                    textColor="text-gray-800"
-                  />
+                  <div>
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Part-Time (9.00 am - 5.00 pm IST)"
+                      textColor="text-gray-800"
+                    />
 
-                  <Label
-                    className="pt-8"
-                    Fweight="font-normal"
-                    Fsize="text-base"
-                    lHeight="leading-6"
-                    label="51-200 employees"
-                    textColor="text-gray-800"
-                  />
-                </div>
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="Experience (1 - 2 years)"
+                      textColor="text-gray-800"
+                    />
 
-                <div>
-                  <Button
-                    label={"Apply Now"}
-                    bgprimary="bg-blue-500"
-                    textprimary="text-blue-500"
-                    borderprimary="border-blue-500"
-                    bgsecondary="bg-zinc-900"
-                    FWeight="font-medium"
-                    FSize="text-base"
-                  />
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="INR (₹) 30,000 - 50,000 / Month"
+                      textColor="text-gray-800"
+                    />
+
+                    <Label
+                      className="pt-8"
+                      Fweight="font-normal"
+                      Fsize="text-base"
+                      lHeight="leading-6"
+                      label="51-200 employees"
+                      textColor="text-gray-800"
+                    />
+                  </div>
+
+                  <div>
+                    <Button
+                      label={"External Apply"}
+                      bgprimary="bg-white"
+                      textprimary="text-blue-500"
+                      textColor="text-blue-500"
+                      borderprimary="border-blue-500"
+                      bgsecondary="bg-zinc-900"
+                      FWeight="font-medium"
+                      FSize="text-base"
+                      onClick={() => {
+                        alert("Successfully applied");
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

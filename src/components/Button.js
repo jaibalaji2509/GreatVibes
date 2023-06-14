@@ -9,9 +9,10 @@ function Button({
   FSize,
   label,
   onClick,
+  textColor,
 }) {
   const className = {
-    container: `${bgprimary} py-0.5 px-3 rounded text-white ${FWeight} ${FSize} border-2 ${borderprimary} hover:${bgsecondary} hover:${textprimary} cursor-pointer duration-300`,
+    container: `${bgprimary} py-0.5 px-3 rounded ${textColor} ${FWeight} ${FSize} border-2 ${borderprimary} hover:${bgsecondary} hover:${textprimary} cursor-pointer duration-300`,
   };
   return (
     <div>
